@@ -2279,14 +2279,14 @@ public class Game implements XMLSaving {
 		NPCMap.clear();
 		OffspringSeedMap.clear();
 		NPCThread.deInitialize();
+		setStarted(false); // Fixes an issue when trying to import save, NPCs trying to do some js.eval() before anything was ready.
 		NPCRegistry.initUniqueNPCs(false);
 
 		// This is due to the fact that on new world creation, the player is placed at coordinates (0, 0), which reveals the three squares at the bottom left corner of the map:
 		Main.game.getActiveWorld().getCell(0, 0).setDiscovered(false);
 		Main.game.getActiveWorld().getCell(0, 1).setDiscovered(false);
 		Main.game.getActiveWorld().getCell(1, 0).setDiscovered(false);
-		
-		setStarted(false);
+
 		
 		SlaverAlleyDialogue.dailyReset();
 		

@@ -183,10 +183,9 @@ public class NPCRegistry {
         new NPCThread("initWallsEndNPCs").start();
         new NPCThread("initSubmissionNPCs").start();
 
-        if (TIME_TESTING)
-            while (!NPCThread.npcsInitialized()) {
-                waits++;
-            }
+        while (!NPCThread.npcsInitialized()) {
+            waits++;
+        }
 
         if (!skipRelationships) initRelations(Main.game.getNPCMap().keySet());
         if (TIME_TESTING)
@@ -205,7 +204,7 @@ public class NPCRegistry {
         addIfMissingSafely(TestNPC.class);
 
         // Contributors:
-        addIfMissingSafely(Lumi.class);
+//        addIfMissingSafely(Lumi.class);
         addIfMissingSafely(Pazu.class);
         addIfMissingSafely(Ashley.class);
         addIfMissingSafely(Callie.class);
