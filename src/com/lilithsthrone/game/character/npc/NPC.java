@@ -166,7 +166,7 @@ public abstract class NPC extends GameCharacter implements XMLSaving {
 			NPCGenerationFlag... generationFlags) {
 		this(isImported, nameTriplet, surname, description,
 				age<MINIMUM_AGE
-						?LocalDateTime.of(Main.game.getStartingDate().getYear()-age, birthMonth, Math.min(birthMonth.maxLength(), birthDay), 12, 0)// Why not random hour/minutes?
+						?LocalDateTime.of(Main.game.getStartingDate().getYear()-age, birthMonth, Math.min(birthMonth.maxLength(), birthDay), 12, 0)
 						:LocalDateTime.of(Main.game.getStartingDate().getYear()-(age-MINIMUM_AGE), birthMonth, Math.min(birthMonth.maxLength(), birthDay), 12, 0),
 				level, startingGender, startingSubspecies, stage, inventory, worldLocation, startingPlace, addedToContacts, generationFlags);
 	}

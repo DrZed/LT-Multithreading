@@ -63,7 +63,7 @@ public class DollFactorySuccubus extends NPC {
 	public DollFactorySuccubus(boolean isImported) {
 		super(isImported, null, "Loviennemartuilani",
 				"",
-				Main.game.getStartingDate().minusYears(Util.random.nextInt(50)+18).minusDays(Util.random.nextInt(364)),
+				Main.game.getStartingDate().minusYears(Util.random.nextInt(50) + GameCharacter.MINIMUM_AGE).minusDays(Util.random.nextInt(364)),
 				25,
 				Gender.F_V_B_FEMALE, Subspecies.DEMON, RaceStage.GREATER,
 				new CharacterInventory(false, 10), 

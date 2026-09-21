@@ -60,7 +60,7 @@ public class EnforcerWarehouseGuard extends NPC {
 	
 	public EnforcerWarehouseGuard(Occupation occupation, AbstractSubspecies subspecies, RaceStage raceStage, Gender gender, boolean isImported, NPCGenerationFlag... generationFlags) {
 		super(isImported, null, null, "",
-				Main.game.getStartingDate().minusYears(Util.random.nextInt(28)+18).minusDays(Util.random.nextInt(364)),
+				Main.game.getStartingDate().minusYears(Util.random.nextInt(28) + GameCharacter.MINIMUM_AGE).minusDays(Util.random.nextInt(364)),
 				5, gender, subspecies, raceStage,
 				new CharacterInventory(false, 10), WorldType.ENFORCER_WAREHOUSE, PlaceType.ENFORCER_WAREHOUSE_ENFORCER_GUARD_POST, false,
 				generationFlags);

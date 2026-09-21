@@ -3,6 +3,7 @@ package com.lilithsthrone.game.character.npc.dominion;
 import java.time.Month;
 import java.util.List;
 
+import com.lilithsthrone.game.character.GameCharacter;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -60,7 +61,7 @@ public class ReindeerOverseer extends NPC {
 	
 	public ReindeerOverseer(Gender gender, boolean isImported) {
 		super(isImported, null, null, "",
-				Main.game.getStartingDate().minusYears(Util.random.nextInt(28)+18).minusDays(Util.random.nextInt(364)),
+				Main.game.getStartingDate().minusYears(Util.random.nextInt(28) + GameCharacter.MINIMUM_AGE).minusDays(Util.random.nextInt(364)),
 				10,
 				null, null, null,
 				new CharacterInventory(false, 10), WorldType.DOMINION, PlaceType.DOMINION_STREET, false);

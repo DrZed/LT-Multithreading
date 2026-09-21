@@ -3,6 +3,7 @@ package com.lilithsthrone.game.character.npc.fields;
 import java.time.Month;
 import java.util.List;
 
+import com.lilithsthrone.game.character.GameCharacter;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -76,7 +77,7 @@ public class LunetteRanged extends NPC {
 	public LunetteRanged(List<String> namePrefixes, String name, boolean isImported) {
 		super(isImported,
 				null, null, "",
-				Main.game.getStartingDate().minusYears(Util.random.nextInt(100)+18).minusDays(Util.random.nextInt(364)),
+				Main.game.getStartingDate().minusYears(Util.random.nextInt(100) + GameCharacter.MINIMUM_AGE).minusDays(Util.random.nextInt(364)),
 				30,
 				null, null, null,
 				new CharacterInventory(false, 10),

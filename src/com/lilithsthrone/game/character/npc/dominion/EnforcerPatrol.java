@@ -71,7 +71,7 @@ public class EnforcerPatrol extends NPC {
 	
 	public EnforcerPatrol(Occupation occupation, Gender gender, boolean isImported, NPCGenerationFlag... generationFlags) {
 		super(isImported, null, null, "",
-				Main.game.getStartingDate().minusYears(Util.random.nextInt(28)+18).minusDays(Util.random.nextInt(364)),
+				Main.game.getStartingDate().minusYears(Util.random.nextInt(28) + GameCharacter.MINIMUM_AGE).minusDays(Util.random.nextInt(364)),
 				5, gender, null, null,
 				new CharacterInventory(false, 10), WorldType.ENFORCER_HQ, PlaceType.ENFORCER_HQ_CELLS_OFFICE, false,
 				generationFlags);

@@ -60,7 +60,7 @@ public class DominionExpressCentaur extends NPC {
 	public DominionExpressCentaur(Gender gender, Colour collarColour, boolean isImported) {
 		super(isImported,
 				null, null, "",
-				Main.game.getStartingDate().minusYears(Util.random.nextInt(28)+18).minusDays(Util.random.nextInt(364)),
+				Main.game.getStartingDate().minusYears(Util.random.nextInt(28) + GameCharacter.MINIMUM_AGE).minusDays(Util.random.nextInt(364)),
 				3,
 				null, null, null,
 				new CharacterInventory(false, 10), WorldType.DOMINION_EXPRESS, PlaceType.DOMINION_EXPRESS_STABLES, false);
