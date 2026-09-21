@@ -2321,14 +2321,14 @@ public class Game implements XMLSaving {
 	public void initNewGame(DialogueNode startingDialogueNode) {
 		NPCMap.clear();
 		OffspringSeedMap.clear();
+		setStarted(false);// Moving this solves an issue for Import Game, it was throwing js eval() issues on NPC generation
 		NPCRegistry.initUniqueNPCs(false);
 
 		// This is due to the fact that on new world creation, the player is placed at coordinates (0, 0), which reveals the three squares at the bottom left corner of the map:
 		Main.game.getActiveWorld().getCell(0, 0).setDiscovered(false);
 		Main.game.getActiveWorld().getCell(0, 1).setDiscovered(false);
 		Main.game.getActiveWorld().getCell(1, 0).setDiscovered(false);
-		
-		setStarted(false);
+
 		
 		SlaverAlleyDialogue.dailyReset();
 		

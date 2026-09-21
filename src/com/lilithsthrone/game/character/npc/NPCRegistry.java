@@ -33,7 +33,7 @@ public class NPCRegistry {
     private static final HashMap<Class<? extends NPC>, CompletableFuture<NPC>> futures = new HashMap<>();
     private static final ArrayList<Class<? extends NPC>> allSimpleNPCClasses = new ArrayList<>(Arrays.asList(
             GenericMaleNPC.class, GenericFemaleNPC.class, GenericAndrogynousNPC.class, PrologueMale.class, PrologueFemale.class, GenericTrader.class, TestNPC.class,
-            Lumi.class, Pazu.class, Ashley.class, Callie.class, Rose.class, Lilaya.class, Arthur.class, Angel.class, Bunny.class, Loppy.class, Jules.class,
+            /*Lumi.class, */Pazu.class, Ashley.class, Callie.class, Rose.class, Lilaya.class, Arthur.class, Angel.class, Bunny.class, Loppy.class, Jules.class,
             Kruger.class, Kalahari.class, Brax.class, CandiReceptionist.class, Wes.class, Elle.class, Sterope.class, Hammer.class, Angelixx.class, Sleip.class,
             Nir.class, Scarlett.class, Helena.class, HarpyBimbo.class, HarpyBimboCompanion.class, HarpyDominant.class, HarpyDominantCompanion.class,
             HarpyNympho.class, HarpyNymphoCompanion.class, Vanessa.class, Natalya.class, Finch.class, Sean.class, RentalMommy.class, Daddy.class, Saellatrix.class,
@@ -44,7 +44,7 @@ public class NPCRegistry {
             Moreno.class, Heather.class, Ziva.class, Eisek.class, Monica.class, Ceridwen.class, Imsu.class, Hale.class, Penelope.class, Belle.class, Daphne.class,
             Farah.class, Ralph.class, Nyan.class, NyanMum.class, Vicky.class, Pix.class, Hannah.class, Kate.class, SupplierLeader.class, SupplierPartner.class,
             Kay.class, Flash.class, Jess.class, Astrapi.class, Vronti.class, Kheiron.class, Arion.class, Minotallys.class, Evelyx.class, Dale.class, Lunexis.class,
-            Ursa.class, Aurokaris.class, Oglix.class, Wynter.class, Ghost.class));
+            Ursa.class, Aurokaris.class, Oglix.class, Wynter.class, Ghost.class, Shiranui.class));
     public static void initUniqueNPCs(boolean skipRelationships) {
         long timeStarted = System.nanoTime();
 
@@ -98,7 +98,7 @@ public class NPCRegistry {
         addIfMissingSafely(TestNPC.class);
 
         // Contributors:
-        addIfMissingSafely(Lumi.class);
+//        addIfMissingSafely(Lumi.class);
         addIfMissingSafely(Pazu.class);
         addIfMissingSafely(Ashley.class);
         addIfMissingSafely(Callie.class);
@@ -342,7 +342,7 @@ public class NPCRegistry {
         addIfMissingSafely(Golix.class, Gender.F_P_B_SHEMALE, Main.game.getNpc(Oglix.class));
         addIfMissingSafely(Wynter.class);
 
-//        addIfMissingSafely(Shiranui.class);
+        addIfMissingSafely(Shiranui.class);
         addIfMissingSafely(Ghost.class);
 
         if (TIME_TESTING)
